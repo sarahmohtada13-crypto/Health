@@ -2,6 +2,9 @@ const express = require('express');
 const { GoogleGenAI } = require('@google/genai');
 
 const app = express();
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
 app.use(express.json());
 app.use(express.static('Public'));
 
